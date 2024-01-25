@@ -1,0 +1,615 @@
+/* Resetowanie domyślnych stylów przeglądarki */
+body, h1, h2, h3, p, ul, li, label, input, textarea, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+   
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+header {
+    background-color: #333; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+#logo {
+    height: 50px; /* Wysokość logo */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px; 
+}
+
+.content {
+    padding: 2em 2em 4em;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* animacja zmiany koloru przy najechaniu kursorem */
+}
+
+.menu-link:hover {
+    color: #ff6600; 
+}
+
+#search-container,
+#mobile-search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search-input,
+#mobile-search-input {
+    flex: 1; /* elastyczność inputa, aby dostosować się do dostępnej przestrzeni */
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+}
+
+#search-button,
+#mobile-search-button {
+    padding: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-radius 0.3s;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-button:hover,
+#mobile-search-button:hover {
+    background-color: #ff6600;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* //////////////////Dodatkowe style dla mobilnego menu ///////////////////////////*/
+
+.mobile-menu {
+    display: none;
+}
+
+#burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 3px; 
+}
+
+#mobile-menu-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; 
+    z-index: 1;
+}
+
+#mobile-menu-content ul {
+    padding: 0;
+    margin: 0;
+}
+
+#mobile-menu-content li {
+    margin: 10px 0;
+}
+
+#mobile-menu-content a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* rozmiar czcionki dla poszczególnych elementów menu */
+    display: block;
+    padding: 10px; /* wypełnienie dla lepszego wyglądu */
+    border-bottom: 10px solid white; 
+}
+
+#mobile-menu-content a:last-child {
+    border-bottom: none; /* Usunięcie linii dla ostatniego elementu menu */
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column; /* Układ pionowy dla elementów nawigacyjnych i wyszukiwarki */
+        align-items: stretch;
+    }
+
+    .desktop-menu,
+    #search-container {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column; /* Układ pionowy dla elementów nawigacyjnych i wyszukiwarki */
+        align-items: stretch;
+    }body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    header {
+        background-color: #333; 
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    #logo {
+        height: 50px; /* Wysokość logo */
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin: 0 20px; /* równe odstępy między elementami nawigacyjnymi */
+    }
+    
+    .menu-link {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s; /* animacja zmiany koloru przy najechaniu kursorem */
+    }
+    
+    .menu-link:hover {
+        color: #ff6600; 
+    }
+    
+    #search-container,
+    #mobile-search-container {
+        flex-direction: column; /* zmiana układu na kolumnowy dla urządzeń mobilnych */
+        align-items: stretch;
+    }
+
+    #search-input,
+    #mobile-search-input {
+        margin-bottom: 10px; /* dodatkowy odstęp między inputem a przyciskiem na urządzeniach mobilnych */
+    }
+    
+    #search-button,
+    #mobile-search-button {
+        width: 30%; /* dostosowanie szerokości dla urządzeń mobilnych */
+    }
+    
+    #search-button:hover,
+    #mobile-search-button:hover {
+        background-color: #ff6600; 
+        color: white; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* zwiększone cieniowanie */
+    }
+    
+    /* //////////////////Dodatkowe style dla mobilnego menu ///////////////////*/
+    
+    .mobile-menu {
+        display: none;
+    }
+    
+    #burger-menu {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        border-radius: 5px; 
+    }
+    
+    #mobile-menu-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #333;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px; 
+    }
+    
+    #mobile-menu-content ul {
+        padding: 0;
+        margin: 0;
+    }
+    
+    #mobile-menu-content li {
+        margin: 10px 0;
+    }
+    
+    #mobile-menu-content a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px; /* rozmiar czcionki dla poszczególnych elementów menu */
+        display: block;
+        padding: 10px; /* wypełnienie dla lepszego wyglądu */
+        border-radius: 5px; 
+        transition: background-color 0.3s; /* animacja zmiany koloru tła przy najechaniu kursorem */
+    }
+    
+    #mobile-menu-content a:hover {
+        background-color: #555; 
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .desktop-menu {
+            display: none;
+        }
+    
+        .mobile-menu {
+            display: flex;
+            align-items: center;
+        }
+    
+        nav {
+            flex-direction: column; /* Układ pionowy dla elementów nawigacyjnych i wyszukiwarki */
+            align-items: stretch;
+        }
+    
+        .desktop-menu,
+        #search-container {
+            display: none;
+        }
+    
+        .mobile-menu {
+            display: flex;
+            align-items: center;
+        }
+    
+        nav {
+            flex-direction: column; /* Układ pionowy dla elementów nawigacyjnych i wyszukiwarki */
+            align-items: stretch;
+        }
+    
+        #search-container {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+    }
+    
+
+    #search-container {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+/*//////////////////////////////// SKLEP ////////////////////////////////*/
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+    margin: 20px; /* zwiększenie marginesu dla lepszego wyglądu */
+    padding: 20px; /* dodanie wewnętrznego marginesu dla całego produktu */
+    border: 2px solid #ddd; /* zwiększenie grubości obramowania */
+}
+
+.product img {
+    width: 100%; /* obraz ma pełną szerokość kontenera */
+    max-width: 100%; /* nie przekracza oryginalnej szerokości obrazu */
+    height: auto; /* dostosowuje wysokość proporcjonalnie */
+}
+
+.product h2, .product p {
+    font-size: 1.4em; /* zwiększenie rozmiaru czcionki dla nagłówka i tekstu */
+}
+
+.cta-button {
+    padding: 20px 40px; /* zwiększenie rozmiaru przycisku */
+    font-size: 1.4em; /* zwiększenie rozmiaru czcionki przycisku */
+    color: #ff6600
+}
+
+/*////////////////////////////BLOG///////////////////////////////////////////*/
+#blogs {
+    background-color: #000000;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.blog {
+    margin-bottom: 40px;
+}
+
+.blog h3 {
+    font-size: 24px;
+}
+
+/*///////////////////////////////////// KALKULATOR /////////////////////////////////*/
+.calculator-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .calculator-container h1 {
+    color: #fff;
+  }
+  
+  .calculator-container label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .calculator-container input {
+    width: calc(50% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; 
+  }
+  
+  .calculator-container button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: calc(50% - 20px);
+    box-sizing: border-box; 
+  }
+  
+  .calculator-container button:hover {
+    background-color: #ff3300;
+  }
+  
+  #resultContainer {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  #resultContainer p {
+    margin: 5px 0;
+    color: #555;
+  }
+
+
+/* /////////////////////// KONIEC KALKULATORA //////////////////////////*/
+
+#hero {
+    position: relative;
+    background-image: url('../photo/tlo1.jpeg');
+    background-size: cover;
+    text-align: center;
+    padding: 500px 0;
+    color: #f0af19;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(0, -50%);
+    width: 40%; 
+    height: 20%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    z-index: 0; /* pseudo-element pod tekstem i przyciskiem */
+}
+
+
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: darkorange;
+    position: relative;
+    z-index: 1; /* tekst nad pseudo-elementem */
+}
+
+#hero h4 {
+    color: #f0af19;
+    position: relative;
+    z-index: 1; /* tekst nad pseudo-elementem */
+}
+.cta-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1; /* przycisk nad pseudo-elementem */
+}
+
+.cta-button:hover {
+    background-color: #ff4500;
+}
+
+
+
+.delete-table thead{
+    font-weight: bold;
+}
+
+.delete-table td{
+    border: 0px;
+    text-align: center;
+}
+
+.delete-table td:first-child{
+    border: 0px;
+    text-align: left;
+}
+
+.admin-page-link {
+    float: right;
+    font-weight: 200;
+    background-color: none;
+}
+
+.admin-page-link:hover {
+    font-weight: 500;
+    background-color: none;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+textarea:invalid {
+    border: 2px solid red;
+}
+/* ///////////////////////////////stylowanie product ////////////////////////////////*/
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.left-element {
+    max-width: 50%; 
+    height: auto;
+}
+
+.right-element {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+/* //////////////////////// KALKULATOR DB ////////////////////////// */
+
+#calculatorCustom {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.row-custom {
+    margin-bottom: 10px;
+}
+
+.product-select-custom {
+    width: 60%;
+    padding: 5px;
+}
+
+.weight-input-custom {
+    width: 30%;
+    padding: 5px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#resultContainerCustom {
+    margin-top: 20px;
+}
+
+.product-select-custom {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    outline: 0;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.product-select-custom::after {
+    content: '▼'; /* Strzałka w dół */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}

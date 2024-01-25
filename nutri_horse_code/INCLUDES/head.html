@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../INCLUDES/style.css">
+    <script src="../INCLUDES/calc.js"></script>
+    <script src="../INCLUDES/script.js"></script>
+    <title>HORSE NUTRI CODE</title>
+</head>
+<body>
+    <header>
+        <a href="../PAGES/main.php" id="logo-link">
+            <img src="../photo/logo_s.jpg" alt="Logo" id="logo">
+        </a>
+
+        <!-- Pasek nawigacyjny (menu) -->
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="../PAGES/onas.php" class="menu-link">O Nas</a></li>
+                <li><a href="../PAGES/produkty.php" class="menu-link">Produkty</a></li>
+                <li><a href="../PAGES/kalkulator.php" class="menu-link">Kalkulator</a></li>
+                <li><a href="../PAGES/plan.php" class="menu-link">Plan Żywieniowy</a></li>
+                <li><a href="../PAGES/zamowienia.php" class="menu-link">Złóż Zamówienie</a></li>
+            </ul>
+
+            <!-- Wyszukiwarka -->
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Szukaj...">
+                <button id="search-button" class="cta-button">Szukaj</button>
+            </div>
+        </nav>
+
+        <!-- Alternatywne menu dla urządzeń mobilnych -->
+        <div class="mobile-menu">
+            <div id="burger-menu" onclick="toggleMobileMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div id="mobile-menu-content">
+                <ul>
+                    <li><a href="../PAGES/onas.php" class="menu-link">O Nas</a></li>
+                    <li><a href="../PAGES/produkty.php" class="menu-link">Produkty</a></li>
+                    <li><a href="../PAGES/kalkulator.php" class="menu-link">Kalkulator</a></li>
+                    <li><a href="../PAGES/plan.php" class="menu-link">Plan Żywieniowy</a></li>
+                    <li><a href="../PAGES/zamowienia.php" class="menu-link">Złóż Zamówienie</a></li>
+                </ul>
+                <div id="mobile-search-container">
+                    <input type="text" id="mobile-search-input" placeholder="Szukaj...">
+                    <button id="mobile-search-button">Szukaj</button>
+                </div>
+            </div>
+        </div>
+    </header>
